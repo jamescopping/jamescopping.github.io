@@ -1,1 +1,3 @@
 source: ./dist
+theme: jekyll-theme-minimal
+
