@@ -103,11 +103,13 @@ function displayCards() {
   }
 }
 
-document.body.appendChild(header());
-document.body.appendChild(projectPage());
+(() => {
+  document.body.appendChild(header());
+  document.body.appendChild(projectPage());
 
-projectCardsElement = document.getElementById("project-cards");
+  projectCardsElement = document.getElementById("project-cards");
 
-addProjectCard("text-adventure", "This project is a text adventure game that is inspired by Zork!");
-addProjectCard("project-pages");
-displayCards();
+  addProjectCard("text-adventure", "This project is a text adventure game that is inspired by Zork!");
+  addProjectCard("project-pages");
+  displayCards();
+})();
