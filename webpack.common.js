@@ -1,20 +1,18 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: {
         app: './src/index.js',
     },
-    devtool: 'inline-source-map',
     devServer: {
         contentBase: './docs',
     },
     plugins: [
-        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Output Management',
+            title: 'Project-Pages',
         }),
     ],
     output: {

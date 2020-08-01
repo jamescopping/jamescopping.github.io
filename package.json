@@ -1,25 +1,23 @@
 {
-  "name": "jamescopping.github.io",
+  "name": "project-pages",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --open",
-    "build": "webpack"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamescopping/jamescopping.github.io.git"
+    "url": "git+https://github.com/jamescopping/project-pages.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jamescopping/jamescopping.github.io/issues"
+    "url": "https://github.com/jamescopping/project-pages/issues"
   },
-  "homepage": "https://github.com/jamescopping/jamescopping.github.io#readme",
+  "homepage": "https://github.com/jamescopping/project-pages#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -30,7 +28,8 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
