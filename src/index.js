@@ -81,7 +81,7 @@ function genProjectCard(repoName, description) {
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
           <a type="button" id="${repoName}-project-btn" href="https://jamescopping.github.io/${repoName}/" class="btn btn-sm btn-outline-primary">Project</a>
-          <a type="button" id="${repoName}-github-btn" href="https://github.com/jamescopping/${repoName}"  class="btn btn-sm btn-outline-secondary">Github</a>
+          <a type="button" id="${repoName}-github-btn" href="https://github.com/jamescopping/${repoName}/"  class="btn btn-sm btn-outline-secondary">Github</a>
         </div>
       </div>
     </div>
@@ -115,5 +115,5 @@ function displayCards() {
   displayCards();
 
   const projectLink = document.getElementById("dissertation-coevolution-project-btn");
-  projectLink.href = `https://github.com/jamescopping/pdf/dissertation-james-copping.pdf`;
+  projectLink.href = `${projectLink.href}dissertation-james-copping.pdf`;
 })();
