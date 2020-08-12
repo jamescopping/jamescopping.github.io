@@ -80,8 +80,8 @@ function genProjectCard(repoName, description) {
       <p class="card-text">${description}</p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <a type="button" href="https://jamescopping.github.io/${repoName}/" class="btn btn-sm btn-outline-primary">Project</a>
-          <a type="button" href="https://github.com/jamescopping/${repoName}"  class="btn btn-sm btn-outline-secondary">Github</a>
+          <a type="button" id="${repoName}-project-btn" href="https://jamescopping.github.io/${repoName}/" class="btn btn-sm btn-outline-primary">Project</a>
+          <a type="button" id="${repoName}-github-btn" href="https://github.com/jamescopping/${repoName}"  class="btn btn-sm btn-outline-secondary">Github</a>
         </div>
       </div>
     </div>
@@ -110,6 +110,10 @@ function displayCards() {
   projectCardsElement = document.getElementById("project-cards");
 
   addProjectCard("text-adventure", "This project is a text adventure game that is inspired by Zork!");
+  addProjectCard("dissertation-coevolution", "Coevolution project for my dissertaion completed in 2019. 2D Game used to explore the idea of using nueral networks and different learning algorithms to generate platforming levels.");
   addProjectCard("project-pages");
   displayCards();
+
+  const projectLink = document.getElementById("dissertation-coevolution-project-btn");
+  projectLink.href = `${projectLink.href}/pdf/dissertation-james-copping.pdf`;
 })();
