@@ -80,8 +80,8 @@ function genProjectCard(repoName, description) {
       <p class="card-text">${description}</p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <a type="button" id="${repoName}-project-btn" href="https://jamescopping.github.io/${repoName}/" class="btn btn-sm btn-outline-primary">Project</a>
-          <a type="button" id="${repoName}-github-btn" href="https://github.com/jamescopping/${repoName}/"  class="btn btn-sm btn-outline-secondary">Github</a>
+          <a type="button" role="button" id="${repoName}-project-btn" href="https://jamescopping.github.io/${repoName}/" class="btn btn-sm btn-outline-primary">Project</a>
+          <a type="button" role="button" id="${repoName}-github-btn" href="https://github.com/jamescopping/${repoName}/"  class="btn btn-sm btn-outline-secondary">Github</a>
         </div>
       </div>
     </div>
@@ -111,9 +111,14 @@ function displayCards() {
 
   addProjectCard("text-adventure", "This project is a text adventure game that is inspired by Zork!");
   addProjectCard("dissertation-coevolution", "Coevolution project for my dissertaion completed in 2019. 2D Game used to explore the idea of using nueral networks and different learning algorithms to generate platforming levels.");
+  addProjectCard("blank2d", "blank2d game engine/template");
   addProjectCard("project-pages");
   displayCards();
 
-  const projectLink = document.getElementById("dissertation-coevolution-project-btn");
-  projectLink.href = `${projectLink.href}dissertation-james-copping.pdf`;
+  const dissertationCoevolutionProjectLink = document.getElementById("dissertation-coevolution-project-btn");
+  dissertationCoevolutionProjectLink.href = `${dissertationCoevolutionProjectLink.href}dissertation-james-copping.pdf`;
+
+  const blank2dProjectLink = document.getElementById("blank2d-project-btn");
+  blank2dProjectLink.setAttribute("aria-disabled", true);
+  blank2dProjectLink.classList.add("disabled");
 })();
