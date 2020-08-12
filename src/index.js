@@ -115,5 +115,5 @@ function displayCards() {
   displayCards();
 
   const projectLink = document.getElementById("dissertation-coevolution-project-btn");
-  projectLink.href = `${projectLink.href}/pdf/dissertation-james-copping.pdf`;
+  projectLink.href = `https://github.com/jamescopping/pdf/dissertation-james-copping.pdf`;
 })();
